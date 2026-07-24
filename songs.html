@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Songs — BandPilot</title>
+  <meta name="description" content="The BandPilot song catalog: views and visibility, the status pipeline, grouping, flags, band voting with veto, and the built-in media player with A/B practice loop." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="BandPilot home">
+        <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <defs><linearGradient id="m1" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#1b2740"/><stop offset="1" stop-color="#0c1220"/></linearGradient></defs>
+          <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#m1)" stroke="#333c4d"/>
+          <path d="M6 15h6M4 20h8.5M6 25h6" stroke="#6FA0FF" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M17 12l12 8-12 8z" fill="#fff"/>
+        </svg>
+        <span class="brand__word"><b>Band</b><b class="pi">Pilot</b></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="songs.html" class="is-active">Songs</a>
+        <a href="rehearsals.html">Rehearsals</a>
+        <a href="getting-started.html">Get started</a>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open Web App</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="songs.html">Songs</a>
+      <a href="rehearsals.html">Rehearsals</a>
+      <a href="getting-started.html">Get started</a>
+      <a class="btn btn--primary" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open Web App</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ PAGE INTRO ============ -->
+    <section class="section pageintro">
+      <div class="wrap">
+        <p class="eyebrow reveal">Feature guide · Songs</p>
+        <h1 class="display reveal" data-d="1">The catalog is<br>the band's memory.</h1>
+        <p class="lead reveal" data-d="1">Open <b>Songs</b> from the menu and you get every tune the band knows — with the key you play it in, its tempo, how the band rates it and what still needs work. Header shows a live count (<span class="key">SONGS 45</span>) and a row of toggles to shape the view.</p>
+        <nav class="jumpnav reveal" data-d="2" aria-label="On this page">
+          <a href="#views">Views &amp; visibility</a>
+          <a href="#details">Song details</a>
+          <a href="#status">Status pipeline</a>
+          <a href="#grouping">Grouping</a>
+          <a href="#flags">Flags</a>
+          <a href="#voting">Voting &amp; veto</a>
+          <a href="#media">Media &amp; practice</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ============ VIEWS ============ -->
+    <section class="section section--tight divider anchor" id="views">
+      <div class="wrap">
+        <div class="feature reveal">
+          <div class="feature__text">
+            <p class="eyebrow">The eye toggle</p>
+            <h3 class="display">Show as much, or as little, as you want.</h3>
+            <p>Tap the <b>eye</b> in the header to switch between a clean, scannable list of titles and a rich view packed with detail. The second row of round toggles then lets you layer in exactly the columns you care about — status, ratings, artist, key, BPM and more.</p>
+            <ul class="howto">
+              <li><span class="n">1</span><span><b>Titles only</b> — a fast, alphabetical index when you just need to find a song.</span></li>
+              <li><span class="n">2</span><span><b>Detail view</b> — adds artist, the amber <span class="key">key</span> / transpose, <span class="bpm">BPM</span>, duration and a status glyph per row.</span></li>
+              <li><span class="n">3</span><span><b>Per-column toggles</b> — flip individual details on or off so the list matches the moment.</span></li>
+            </ul>
+          </div>
+          <div class="feature__media">
+            <div class="media-duo">
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-titles-only.jpg" alt="Song list showing titles only" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-detail-rows.jpg" alt="Song list showing full detail: key, BPM, status and play button" loading="lazy" width="1080" height="2340" /></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DETAILS / EDIT SHEET ============ -->
+    <section class="section section--tight divider anchor" id="details">
+      <div class="wrap">
+        <div class="feature feature--flip reveal">
+          <div class="feature__text">
+            <p class="eyebrow">The song sheet</p>
+            <h3 class="display">Every song, on the record.</h3>
+            <p>Open a song to see and edit its details in one sheet. Set the band's status, the key you actually play it in against the original, your BPM, the duration, free-text comments and any flags. Change the status right from the list, too — tap the glyph and pick <span class="accent">Need practice</span>, <span style="color:var(--stage)">Ready for stage</span> or <span class="muted">Suggested</span>.</p>
+            <div class="note">
+              <svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+              <p><b>Our key vs. original.</b> BandPilot tracks both, so a song transposed for your singer shows up clearly as, say, <span class="key">Dm <span class="arrow">→</span> Cm</span>.</p>
+            </div>
+          </div>
+          <div class="feature__media">
+            <div class="media-duo">
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-edit-sheet.jpg" alt="Song detail sheet with status, our key, original key, BPM, duration, comments and flags" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-status-menu.jpg" alt="Status menu showing Need practice, Ready for stage and Suggested" loading="lazy" width="1080" height="2340" /></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATUS PIPELINE ============ -->
+    <section class="section divider anchor" id="status">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Group by status</p>
+          <h2 class="display">Know what's stage-ready at a glance.</h2>
+          <p class="lead">Group the catalog by status and it collapses into three lanes with live counts. It's the fastest way to see where the band stands — and what to rehearse next.</p>
+        </div>
+        <div class="feature reveal" style="padding-top:0">
+          <div class="feature__text">
+            <div class="pipeline" style="grid-template-columns:1fr">
+              <div class="stage stage--ready">
+                <span class="stage__bar"></span>
+                <div class="stage__top"><span class="stage__name">Ready for stage</span><span class="stage__count">5</span></div>
+                <p>Locked in and gig-ready. Build sets straight from this lane.</p>
+              </div>
+              <div class="stage stage--practice">
+                <span class="stage__bar"></span>
+                <div class="stage__top"><span class="stage__name">Need practice</span><span class="stage__count">14</span></div>
+                <p>Chosen, not yet tight — the shortlist for your next rehearsal.</p>
+              </div>
+              <div class="stage stage--suggested">
+                <span class="stage__bar"></span>
+                <div class="stage__top"><span class="stage__name">Suggested</span><span class="stage__count">26</span></div>
+                <p>Fresh ideas the band can rate and vote on.</p>
+              </div>
+            </div>
+          </div>
+          <div class="feature__media">
+            <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-group-status.jpg" alt="Songs grouped by status: Ready for stage, Need practice, Suggested with counts" loading="lazy" width="1080" height="2340" /></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GROUPING ============ -->
+    <section class="section section--tight divider anchor" id="grouping">
+      <div class="wrap">
+        <div class="feature feature--flip reveal">
+          <div class="feature__text">
+            <p class="eyebrow">Group by anything</p>
+            <h3 class="display">Slice the set the way your night runs.</h3>
+            <p>Beyond status, group the catalog by <b>decade</b> or by <b>artist</b> — each group folds up with its own count so a 45-song list stays readable. Planning a 70s block, or every Rolling Stones tune you cover? It's two taps away.</p>
+            <ul class="howto">
+              <li><span class="n">↓</span><span><b>By decade</b> — 1960s, 1970s, 1980s… right through to 2020s, plus an <em>Unknown year</em> bucket.</span></li>
+              <li><span class="n">↓</span><span><b>By artist</b> — every band you cover, sorted with the most-played up top.</span></li>
+            </ul>
+          </div>
+          <div class="feature__media">
+            <div class="media-duo">
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-group-decade.jpg" alt="Songs grouped by decade with counts" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-group-artist.jpg" alt="Songs grouped by artist with counts" loading="lazy" width="1080" height="2340" /></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FLAGS ============ -->
+    <section class="section divider anchor" id="flags">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Flags</p>
+          <h2 class="display">Little reminders that save a rehearsal.</h2>
+          <p class="lead">Flags are colour-coded tags you attach to songs so nothing gets forgotten on the night — the acoustic guitar, the cowbell, the solo someone still has to learn. Group by flag to see every song that needs the same thing.</p>
+        </div>
+        <div class="feature reveal" style="padding-top:0">
+          <div class="feature__text">
+            <div class="flaggrid">
+              <div class="flagcard"><span class="flag flag--acoustic"></span><div><b>Acoustic</b><p>Acoustic guitar is required.</p></div></div>
+              <div class="flagcard"><span class="flag flag--cowbell"></span><div><b>Cowbell</b><p>Cowbell is used.</p></div></div>
+              <div class="flagcard"><span class="flag flag--gitsolo"></span><div><b>GitSolo</b><p>Joe needs to learn the guitar solo.</p></div></div>
+              <div class="flagcard"><span class="flag flag--harmony"></span><div><b>Harmony</b><p>Vocal harmony needs practice.</p></div></div>
+              <div class="flagcard"><span class="flag flag--keys"></span><div><b>Keys</b><p>Keyboard is required.</p></div></div>
+            </div>
+            <div class="note">
+              <svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5a2 2 0 0 1 2-2h9l-2 4 2 4H6"/></svg>
+              <p><b>Your flags, your labels.</b> The set above is an example — a band defines its own flags and what each one means.</p>
+            </div>
+          </div>
+          <div class="feature__media">
+            <div class="media-duo">
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-flags-legend.jpg" alt="Flag legend showing Acoustic, Cowbell, GitSolo, Harmony and Keys with descriptions" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-group-flags.jpg" alt="Songs grouped by flag with counts" loading="lazy" width="1080" height="2340" /></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VOTING ============ -->
+    <section class="section divider anchor" id="voting">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Voting &amp; veto</p>
+          <h2 class="display">The setlist is a group decision.</h2>
+          <p class="lead">Every member rates songs one to five stars. Expand a song to see how each person voted and the band average — so the setlist reflects the whole room, not just whoever shouts loudest. And when a song is a hard no for someone, they can <span class="veto" style="font-size:14px"><span class="dot"></span>Veto</span> it.</p>
+        </div>
+        <div class="feature reveal" style="padding-top:0">
+          <div class="feature__text">
+            <ul class="howto">
+              <li><span class="n">★</span><span><b>Rate</b> any song from your own row — your stars roll into the band average.</span></li>
+              <li><span class="n">▾</span><span><b>Expand</b> a song to see every member's rating side by side.</span></li>
+              <li><span class="n">⛔</span><span><b>Veto</b> marks a song you can't or won't play — it shows in red for the whole band to see.</span></li>
+              <li><span class="n">↕</span><span><b>Sort by rating</b> to float the band's favourites to the top.</span></li>
+            </ul>
+          </div>
+          <div class="feature__media">
+            <div class="media-duo">
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-voting-members.jpg" alt="A song expanded to show each member's star rating" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-voting-veto.jpg" alt="A song showing a red Veto from a member" loading="lazy" width="1080" height="2340" /></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEDIA ============ -->
+    <section class="section divider anchor" id="media">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Media &amp; practice</p>
+          <h2 class="display">Learn it and drill it, without leaving the app.</h2>
+          <p class="lead">Each song carries its own links — YouTube (studio, live, karaoke, lyrics), Spotify and audio versions. Play them inline, or open the practice player and set an <b>A/B loop</b> to hammer the tricky sixteen bars until they stick.</p>
+        </div>
+        <div class="feature reveal" style="padding-top:0">
+          <div class="feature__text">
+            <ul class="howto">
+              <li><span class="n">▶</span><span><b>One tap to play</b> — the play button on any row opens that song's media.</span></li>
+              <li><span class="n">▦</span><span><b>Pick a version</b> — switch between YouTube, Studio, Karaoke, Live and Lyrics.</span></li>
+              <li><span class="n">🔁</span><span><b>A/B loop</b> — mark point A and point B and the player repeats just that section.</span></li>
+              <li><span class="n">↗</span><span><b>Spotify &amp; more</b> open in their own apps when you want the full track.</span></li>
+            </ul>
+          </div>
+          <div class="feature__media">
+            <div class="media-duo">
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-media-links.jpg" alt="A song's media links: YouTube lyrics and live, audio studio version, Spotify" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/songs-media-loop.jpg" alt="The practice player with an A/B loop set between 0:52 and 1:17" loading="lazy" width="1080" height="2340" /></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section section--tight divider">
+      <div class="wrap ctaband reveal">
+        <h2 class="display">Next up: rehearsals.</h2>
+        <p class="lead" style="margin-inline:auto">See how songs become a running order, complete with absences and email updates.</p>
+        <div class="btnrow">
+          <a class="btn btn--primary btn--lg" href="rehearsals.html">Explore rehearsals</a>
+          <a class="btn btn--ghost btn--lg" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open the Web App</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer__grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="BandPilot home">
+          <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <defs><linearGradient id="m2" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#1b2740"/><stop offset="1" stop-color="#0c1220"/></linearGradient></defs>
+            <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#m2)" stroke="#333c4d"/>
+            <path d="M6 15h6M4 20h8.5M6 25h6" stroke="#6FA0FF" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M17 12l12 8-12 8z" fill="#fff"/>
+          </svg>
+          <span class="brand__word"><b>Band</b><b class="pi">Pilot</b></span>
+        </a>
+        <p class="footer__tag">Manage. Organize. Rock. The shared home for your band's songs and rehearsals.</p>
+      </div>
+      <div class="footer">
+        <h4>Product</h4>
+        <a href="songs.html">Songs</a>
+        <a href="rehearsals.html">Rehearsals</a>
+        <a href="getting-started.html">Get started</a>
+        <a href="https://app.bandpilot.net" target="_blank" rel="noopener">Web app ↗</a>
+      </div>
+      <div class="footer">
+        <h4>Platforms</h4>
+        <a>Web app — live</a>
+        <a>Android — coming soon</a>
+        <a>iOS — coming soon</a>
+      </div>
+    </div>
+    <div class="wrap footer__bottom">
+      <span class="mono">© 2026 BandPilot</span>
+      <span class="mono">Manage · Organize · Rock</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

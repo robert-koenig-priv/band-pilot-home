@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BandPilot — your band's songs & rehearsals, in every pocket</title>
+  <meta name="description" content="BandPilot keeps your band on the same page: a shared song catalog with keys, BPM, ratings and flags, plus rehearsal setlists and email updates. Android, iOS and a web app for band admins." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="BandPilot home">
+        <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <defs><linearGradient id="m1" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#1b2740"/><stop offset="1" stop-color="#0c1220"/></linearGradient></defs>
+          <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#m1)" stroke="#333c4d"/>
+          <path d="M6 15h6M4 20h8.5M6 25h6" stroke="#6FA0FF" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M17 12l12 8-12 8z" fill="#fff"/>
+        </svg>
+        <span class="brand__word"><b>Band</b><b class="pi">Pilot</b></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html" class="is-active">Home</a>
+        <a href="songs.html">Songs</a>
+        <a href="rehearsals.html">Rehearsals</a>
+        <a href="getting-started.html">Get started</a>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open Web App</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="songs.html">Songs</a>
+      <a href="rehearsals.html">Rehearsals</a>
+      <a href="getting-started.html">Get started</a>
+      <a class="btn btn--primary" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open Web App</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="section hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text reveal">
+          <p class="eyebrow hero__eyebrow">Manage · Organize · Rock</p>
+          <h1 class="display">Your band's setlist,<br><span class="accent">in every pocket.</span></h1>
+          <p class="lead hero__lead">BandPilot is the shared home for everything your band plays. Every member carries the song catalog, keys and rehearsal plan on their phone — while the band admin keeps it all in order from the web.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open the Web App</a>
+            <a class="btn btn--ghost btn--lg" href="#features">See what it does</a>
+          </div>
+          <p class="hero__note">Web app live now · Android &amp; iOS coming soon</p>
+        </div>
+
+        <div class="hero__stage reveal" data-d="1">
+          <div class="floaty floaty--ready">
+            <span class="status status--ready">✓</span> Ready for stage <span class="count">5</span>
+          </div>
+          <div class="floaty floaty--key">
+            <span class="key">Dm <span class="arrow">→</span> Cm</span> <span class="bpm">85</span>
+          </div>
+          <div class="floaty floaty--veto">
+            <span class="veto"><span class="dot"></span>Veto</span>
+          </div>
+          <div class="phone">
+            <div class="phone__screen">
+              <img src="assets/img/songs-detail-rows.jpg" alt="The BandPilot song list showing titles, artists, keys, BPM and status icons" loading="eager" width="1080" height="2340" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ROLES / COLLABORATION ============ -->
+    <section class="section section--tight divider" id="collaboration">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Built for the whole band</p>
+          <h2 class="display">One band. Two kinds of&nbsp;seat.</h2>
+          <p class="lead">BandPilot is collaboration first. The music lives in one shared place, so nobody argues over which version of the setlist is current — because there's only ever one.</p>
+        </div>
+        <div class="roles">
+          <div class="role role--member reveal">
+            <span class="role__tag"><span class="d"></span>Members · on their phone</span>
+            <h3>Everyone plays from the same page</h3>
+            <p>Each musician installs the app and joins the band. From the couch or the rehearsal room they can look up a song's key and tempo, rate what they want to play, flag what needs work and follow along with the video.</p>
+            <ul>
+              <li>Browse the catalog and open any song's details</li>
+              <li>Rate songs and cast a veto to steer the setlist</li>
+              <li>Practise with the built-in A/B loop player</li>
+              <li>See the next rehearsal's plan and who's out</li>
+            </ul>
+          </div>
+          <div class="role role--admin reveal" data-d="1">
+            <span class="role__tag"><span class="d"></span>Band admin · runs the system</span>
+            <h3>You keep the show on the road</h3>
+            <p>The admin sets up the band, curates the catalog, promotes songs from <em>Suggested</em> to <em>Ready for stage</em> and builds rehearsal setlists. It all works on the phone, but the roomy web app is the recommended cockpit for admin work.</p>
+            <ul>
+              <li>Add songs, set keys, BPM, flags and status</li>
+              <li>Order rehearsals with drag-and-drop setlists</li>
+              <li>Mark absent members and email the band an update</li>
+              <li>Manage several bands from one account</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURE OVERVIEW ============ -->
+    <section class="section divider" id="features">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">What's inside</p>
+          <h2 class="display">Everything a working band needs.</h2>
+          <p class="lead">Two big rooms — Songs and Rehearsals — plus the account tools that tie your bands together. Tap through for the full walk-through and help.</p>
+        </div>
+        <div class="cards">
+          <a class="card reveal" href="songs.html">
+            <span class="card__no">01 · Songs</span>
+            <h3>A catalog that knows the details</h3>
+            <p>Keys and transpositions, BPM, duration, ratings, per-band status and colour-coded flags — for every song you play.</p>
+            <div class="card__chips">
+              <span class="key">E</span><span class="bpm">146</span>
+              <span class="status status--ready" style="width:20px;height:20px;font-size:11px">✓</span>
+              <span class="flags"><span class="flag flag--cowbell"></span><span class="flag flag--gitsolo"></span></span>
+            </div>
+            <span class="card__more">Explore songs →</span>
+          </a>
+          <a class="card reveal" data-d="1" href="rehearsals.html">
+            <span class="card__no">02 · Rehearsals</span>
+            <h3>Setlists that build themselves</h3>
+            <p>Pull songs from the catalog, drag them into order, mark who's absent and send the whole band an email update.</p>
+            <div class="card__chips">
+              <span class="key">Mi., Aug. 5 · 19:00</span>
+            </div>
+            <span class="card__more">Plan a rehearsal →</span>
+          </a>
+          <a class="card reveal" data-d="2" href="getting-started.html">
+            <span class="card__no">03 · Get started</span>
+            <h3>Sign in, join, and go</h3>
+            <p>Create an account, hop between your bands, and learn where everything lives — on the phone and in the web app.</p>
+            <div class="card__chips">
+              <span class="key">3 bands</span><span class="key">Admin</span>
+            </div>
+            <span class="card__more">Start here →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SIGNATURE: STATUS PIPELINE ============ -->
+    <section class="section section--tight divider">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">The idea in one picture</p>
+          <h2 class="display">Songs move down the runway.</h2>
+          <p class="lead">Every song sits in one of three lanes. A quick tap moves it forward as the band gets it tighter — so at a glance you know what's stage-ready and what still needs work.</p>
+        </div>
+        <div class="pipeline">
+          <div class="stage stage--suggested reveal">
+            <span class="stage__bar"></span>
+            <div class="stage__top"><span class="stage__name">Suggested</span><span class="stage__count">26</span></div>
+            <p>Ideas anyone can throw in. Rate them and vote to decide what's worth learning.</p>
+          </div>
+          <div class="stage stage--practice reveal" data-d="1">
+            <span class="stage__bar"></span>
+            <div class="stage__top"><span class="stage__name">Need practice</span><span class="stage__count">14</span></div>
+            <p>On the list, not yet tight. These are the songs to load into your next rehearsal.</p>
+          </div>
+          <div class="stage stage--ready reveal" data-d="2">
+            <span class="stage__bar"></span>
+            <div class="stage__top"><span class="stage__name">Ready for stage</span><span class="stage__count">5</span></div>
+            <p>Locked in and gig-ready. Pull straight from here when you build a set.</p>
+          </div>
+        </div>
+        <p class="stage__flow reveal">SUGGESTED → NEED PRACTICE → READY FOR STAGE</p>
+      </div>
+    </section>
+
+    <!-- ============ PLATFORMS ============ -->
+    <section class="section divider" id="platforms">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Where it runs</p>
+          <h2 class="display">On the couch, in the van, on the stage.</h2>
+          <p class="lead">The same band, the same data, on whatever screen is closest. Members live on the mobile apps; admins get the extra room of the web app.</p>
+        </div>
+        <div class="platforms">
+          <div class="plat reveal">
+            <svg class="plat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+            <h3>Android</h3>
+            <p>The full member experience — catalog, ratings, media player and rehearsal plans — native on your phone.</p>
+            <span class="plat__status is-soon"><span class="d"></span>Coming soon</span>
+          </div>
+          <div class="plat reveal" data-d="1">
+            <svg class="plat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+            <h3>iOS</h3>
+            <p>A native iPhone build with the same shared catalog, voting, flags and practice loop as everywhere else.</p>
+            <span class="plat__status is-soon"><span class="d"></span>Coming soon</span>
+          </div>
+          <div class="plat reveal" data-d="2">
+            <svg class="plat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+            <h3>Web app <span class="muted" style="font-size:14px">· for admins</span></h3>
+            <p>The recommended cockpit for band admins. Big screen, quick editing — best on a tablet or PC.</p>
+            <span class="plat__status is-live"><span class="d"></span>Live now</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section divider">
+      <div class="wrap ctaband reveal">
+        <p class="eyebrow" style="justify-content:center">Ready when you are</p>
+        <h2 class="display">Get your band on the same page.</h2>
+        <p class="lead" style="margin-inline:auto">Open the web app to set up your band, or read the walk-through to see every feature first.</p>
+        <div class="btnrow">
+          <a class="btn btn--primary btn--lg" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open the Web App</a>
+          <a class="btn btn--ghost btn--lg" href="getting-started.html">Read the guide</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer__grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="BandPilot home">
+          <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <defs><linearGradient id="m2" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#1b2740"/><stop offset="1" stop-color="#0c1220"/></linearGradient></defs>
+            <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#m2)" stroke="#333c4d"/>
+            <path d="M6 15h6M4 20h8.5M6 25h6" stroke="#6FA0FF" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M17 12l12 8-12 8z" fill="#fff"/>
+          </svg>
+          <span class="brand__word"><b>Band</b><b class="pi">Pilot</b></span>
+        </a>
+        <p class="footer__tag">Manage. Organize. Rock. The shared home for your band's songs and rehearsals.</p>
+      </div>
+      <div class="footer">
+        <h4>Product</h4>
+        <a href="songs.html">Songs</a>
+        <a href="rehearsals.html">Rehearsals</a>
+        <a href="getting-started.html">Get started</a>
+        <a href="https://app.bandpilot.net" target="_blank" rel="noopener">Web app ↗</a>
+      </div>
+      <div class="footer">
+        <h4>Platforms</h4>
+        <a>Web app — live</a>
+        <a>Android — coming soon</a>
+        <a>iOS — coming soon</a>
+      </div>
+    </div>
+    <div class="wrap footer__bottom">
+      <span class="mono">© 2026 BandPilot</span>
+      <span class="mono">Manage · Organize · Rock</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get started — BandPilot</title>
+  <meta name="description" content="Getting started with BandPilot: create an account, switch between your bands, find your way around, and understand admin vs. member roles and the web app." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="BandPilot home">
+        <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <defs><linearGradient id="m1" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#1b2740"/><stop offset="1" stop-color="#0c1220"/></linearGradient></defs>
+          <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#m1)" stroke="#333c4d"/>
+          <path d="M6 15h6M4 20h8.5M6 25h6" stroke="#6FA0FF" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M17 12l12 8-12 8z" fill="#fff"/>
+        </svg>
+        <span class="brand__word"><b>Band</b><b class="pi">Pilot</b></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="songs.html">Songs</a>
+        <a href="rehearsals.html">Rehearsals</a>
+        <a href="getting-started.html" class="is-active">Get started</a>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open Web App</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="songs.html">Songs</a>
+      <a href="rehearsals.html">Rehearsals</a>
+      <a href="getting-started.html">Get started</a>
+      <a class="btn btn--primary" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open Web App</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ PAGE INTRO ============ -->
+    <section class="section pageintro">
+      <div class="wrap">
+        <p class="eyebrow reveal">Get started</p>
+        <h1 class="display reveal" data-d="1">Sign in, join,<br>and go.</h1>
+        <p class="lead reveal" data-d="1">You'll be up and running in a few minutes. Create an account, join or set up a band, and everyone plays from the same catalog. Here's the lay of the land.</p>
+        <nav class="jumpnav reveal" data-d="2" aria-label="On this page">
+          <a href="#account">Create an account</a>
+          <a href="#bands">Your bands</a>
+          <a href="#around">Find your way around</a>
+          <a href="#roles">Admin vs. member</a>
+          <a href="#web">The web app</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ============ ACCOUNT ============ -->
+    <section class="section section--tight divider anchor" id="account">
+      <div class="wrap">
+        <div class="feature reveal">
+          <div class="feature__text">
+            <p class="eyebrow">Step one</p>
+            <h3 class="display">Create your account.</h3>
+            <p>Open the app or the web app and sign in with your email and a password. New here? Tap <b>Register</b> to make an account; forgot your password? <b>Forgot password?</b> sends you a reset. One account follows you across the phone apps and the web.</p>
+            <ul class="howto">
+              <li><span class="n">1</span><span><b>Register</b> with your email address and a password.</span></li>
+              <li><span class="n">2</span><span><b>Sign in</b> — the same login works everywhere.</span></li>
+              <li><span class="n">3</span><span><b>Join a band</b> — ask your band admin to add you, or create your own.</span></li>
+            </ul>
+          </div>
+          <div class="feature__media">
+            <!-- Recreated login screen (illustrative — not a real screenshot) -->
+            <div class="phone phone--sm">
+              <div class="phone__screen" style="background:var(--ink); display:flex; align-items:center;">
+                <div class="mock" style="border:0; box-shadow:none; background:transparent; width:100%;">
+                  <div class="mock__logo" style="justify-content:center; margin-bottom:8px;">
+                    <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" style="width:30px;height:30px">
+                      <defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#1b2740"/><stop offset="1" stop-color="#0c1220"/></linearGradient></defs>
+                      <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#lg)" stroke="#333c4d"/>
+                      <path d="M6 15h6M4 20h8.5M6 25h6" stroke="#6FA0FF" stroke-width="2.4" stroke-linecap="round"/>
+                      <path d="M17 12l12 8-12 8z" fill="#fff"/>
+                    </svg>
+                    <span class="brand__word" style="font-size:20px"><b>Band</b><b class="pi">Pilot</b></span>
+                  </div>
+                  <p class="muted" style="text-align:center; font-size:14px; margin-bottom:20px">Sign in to your bands</p>
+                  <label>Email</label>
+                  <div class="field">you@yourband.com</div>
+                  <label>Password</label>
+                  <div class="field field--focus">••••••••</div>
+                  <div class="signin"><span class="btn btn--primary" aria-hidden="true">Sign in</span></div>
+                  <p class="accent" style="font-size:14px; margin-top:22px; font-weight:700">No account yet? Register</p>
+                  <p class="accent" style="font-size:14px; margin-top:14px; font-weight:700">Forgot password?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BANDS ============ -->
+    <section class="section section--tight divider anchor" id="bands">
+      <div class="wrap">
+        <div class="feature feature--flip reveal">
+          <div class="feature__text">
+            <p class="eyebrow">One account, many bands</p>
+            <h3 class="display">Play in more than one band? No problem.</h3>
+            <p>The <b>Bands</b> screen lists every band you belong to, each with its style, home town and your role. The home icon marks your default band; tap any card to jump into its songs and rehearsals. Your role — <span class="key">Admin</span> or member — is shown on each card.</p>
+            <ul class="howto">
+              <li><span class="n">♪</span><span><b>Switch bands</b> anytime from the Bands list or the side menu.</span></li>
+              <li><span class="n">⌂</span><span><b>Default band</b> — the home icon opens first when you launch the app.</span></li>
+              <li><span class="n">★</span><span><b>Your role</b> per band decides what you can change.</span></li>
+            </ul>
+          </div>
+          <div class="feature__media">
+            <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/bands-list.jpg" alt="The Bands screen listing three bands with style, town and role" loading="lazy" width="1080" height="2340" /></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AROUND ============ -->
+    <section class="section section--tight divider anchor" id="around">
+      <div class="wrap">
+        <div class="feature reveal">
+          <div class="feature__text">
+            <p class="eyebrow">The side menu</p>
+            <h3 class="display">Everything is one tap from here.</h3>
+            <p>The menu (☰) is home base. Up top you switch bands; under the current band you jump to <b>Rehearsal</b> and <b>Songs</b>; and there's a shortcut to open <b>BandPilot Web</b> for the big-screen admin view. Your account, an About page and Logout sit at the bottom.</p>
+            <div class="note">
+              <svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 3h9l5 5v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/></svg>
+              <p><b>Tablet or PC recommended</b> for the web app — the menu says so right next to the link, because that's where admin work is comfiest.</p>
+            </div>
+          </div>
+          <div class="feature__media">
+            <!-- Recreated navigation drawer (illustrative — not a real screenshot) -->
+            <div class="phone phone--sm">
+              <div class="phone__screen" style="background:var(--ink);">
+                <div style="padding:22px 16px; height:100%;">
+                  <span class="brand__word" style="font-size:24px; display:block; margin-bottom:22px"><b>Band</b><b class="pi">Pilot</b></span>
+                  <div class="mock" style="border:0; box-shadow:none; background:transparent; padding:0;">
+                    <div class="drawer-item">
+                      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg>
+                      Bands
+                    </div>
+                    <div class="drawer-sep"></div>
+                    <div class="drawer-band">Your band</div>
+                    <div class="drawer-item">
+                      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                      Rehearsal
+                    </div>
+                    <div class="drawer-item is-active">
+                      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                      Songs
+                    </div>
+                    <div class="drawer-sep"></div>
+                    <div class="drawer-item">
+                      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
+                      <span><b>Band<span class="pi" style="color:var(--pilot-bright)">Pilot</span> Web</b><br><span class="muted" style="font-size:12px; font-weight:400">Tablet or PC recommended.</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ROLES ============ -->
+    <section class="section divider anchor" id="roles">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Who does what</p>
+          <h2 class="display">Admin vs. member.</h2>
+          <p class="lead">Everyone in a band sees the same songs and rehearsals. The difference is what you can change — one person keeps things tidy so the rest can just play.</p>
+        </div>
+        <div class="roles">
+          <div class="role role--member reveal">
+            <span class="role__tag"><span class="d"></span>Member</span>
+            <h3>Show up and play</h3>
+            <p>Browse the catalog, rate and veto songs, use the practice player and check the next rehearsal — all from your phone.</p>
+            <ul>
+              <li>Rate songs and cast a veto</li>
+              <li>Practise with the A/B loop player</li>
+              <li>See setlists and who's absent</li>
+            </ul>
+          </div>
+          <div class="role role--admin reveal" data-d="1">
+            <span class="role__tag"><span class="d"></span>Admin</span>
+            <h3>Keep the band organised</h3>
+            <p>Everything a member can do, plus curate the catalog and run rehearsals. Comfiest in the web app on a bigger screen.</p>
+            <ul>
+              <li>Add songs; set key, BPM, status, flags</li>
+              <li>Build and reorder rehearsal setlists</li>
+              <li>Mark absences and email the band</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WEB ============ -->
+    <section class="section divider anchor" id="web">
+      <div class="wrap">
+        <div class="feature feature--flip reveal">
+          <div class="feature__text">
+            <p class="eyebrow">The cockpit</p>
+            <h3 class="display">Admin work? Reach for the web app.</h3>
+            <p>The mobile apps do everything, but bulk editing — adding a stack of songs, wiring up media links, building a long set — is simply faster with a keyboard and a big screen. The web app shares the exact same catalog and rehearsals, live. Open it from the side menu or head straight there.</p>
+            <div class="hero__cta">
+              <a class="btn btn--primary btn--lg" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open app.bandpilot.net</a>
+            </div>
+            <p class="hero__note">Best on a tablet or PC · Android &amp; iOS apps coming soon</p>
+          </div>
+          <div class="feature__media">
+            <div class="plat" style="max-width:360px">
+              <svg class="plat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:44px;height:44px"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+              <h3>BandPilot Web</h3>
+              <p>The recommended workspace for band admins — the same data as the apps, with room to move.</p>
+              <span class="plat__status is-live"><span class="d"></span>Live now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section section--tight divider">
+      <div class="wrap ctaband reveal">
+        <h2 class="display">That's the tour.</h2>
+        <p class="lead" style="margin-inline:auto">Dive into the features, or open the web app and set your band up now.</p>
+        <div class="btnrow">
+          <a class="btn btn--primary btn--lg" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open the Web App</a>
+          <a class="btn btn--ghost btn--lg" href="songs.html">Browse the features</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer__grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="BandPilot home">
+          <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <defs><linearGradient id="m2" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#1b2740"/><stop offset="1" stop-color="#0c1220"/></linearGradient></defs>
+            <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#m2)" stroke="#333c4d"/>
+            <path d="M6 15h6M4 20h8.5M6 25h6" stroke="#6FA0FF" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M17 12l12 8-12 8z" fill="#fff"/>
+          </svg>
+          <span class="brand__word"><b>Band</b><b class="pi">Pilot</b></span>
+        </a>
+        <p class="footer__tag">Manage. Organize. Rock. The shared home for your band's songs and rehearsals.</p>
+      </div>
+      <div class="footer">
+        <h4>Product</h4>
+        <a href="songs.html">Songs</a>
+        <a href="rehearsals.html">Rehearsals</a>
+        <a href="getting-started.html">Get started</a>
+        <a href="https://app.bandpilot.net" target="_blank" rel="noopener">Web app ↗</a>
+      </div>
+      <div class="footer">
+        <h4>Platforms</h4>
+        <a>Web app — live</a>
+        <a>Android — coming soon</a>
+        <a>iOS — coming soon</a>
+      </div>
+    </div>
+    <div class="wrap footer__bottom">
+      <span class="mono">© 2026 BandPilot</span>
+      <span class="mono">Manage · Organize · Rock</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
