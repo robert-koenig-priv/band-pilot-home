@@ -8,10 +8,10 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Noto+Sans+Georgian:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <script>
   (function(){var d=document.documentElement;d.classList.add("js");
-  var SUP=["en","de","fr"],l=null;try{var s=localStorage.getItem("bp-lang");if(s&&SUP.indexOf(s)>-1)l=s;}catch(e){}
+  var SUP=["en","de","fr","ka"],l=null;try{var s=localStorage.getItem("bp-lang");if(s&&SUP.indexOf(s)>-1)l=s;}catch(e){}
   if(!l){var n=navigator.languages||[navigator.language||"en"];for(var i=0;i<n.length;i++){var b=(n[i]||"").slice(0,2).toLowerCase();if(SUP.indexOf(b)>-1){l=b;break;}}}
   l=l||"en";d.lang=l;window.__bpLang=l;if(l!=="en"){d.className+=" i18n-pending";setTimeout(function(){d.classList.remove("i18n-pending");},1500);}})();
   </script>
@@ -45,6 +45,7 @@
           <button data-lang="en" role="menuitem">English <span class="tick">✓</span></button>
           <button data-lang="de" role="menuitem">Deutsch <span class="tick">✓</span></button>
           <button data-lang="fr" role="menuitem">Français <span class="tick">✓</span></button>
+          <button data-lang="ka" role="menuitem">ქართული <span class="tick">✓</span></button>
         </div>
       </div>
       <a class="btn btn--primary nav__cta" href="https://app.bandpilot.net" target="_blank" rel="noopener" data-i18n="nav.openWebApp">Open Web App</a>
@@ -62,6 +63,7 @@
         <button data-lang="en">EN</button>
         <button data-lang="de">DE</button>
         <button data-lang="fr">FR</button>
+        <button data-lang="ka">KA</button>
       </div>
     </div>
   </header>

@@ -42,11 +42,16 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 Push this folder as a repo, then in **Settings → Pages** set the source to the `main` branch,
 `/ (root)`. The site is served as-is (`.nojekyll` disables Jekyll processing).
 
-## Translations (English / Deutsch / Français)
+## Translations (English / Deutsch / Français / ქართული)
 
 The site is multilingual with **no build step**. English is authored inline in the HTML and is the
-fallback; German and French live in one file. It auto-detects the visitor's browser language, offers a
-🌐 switcher in the header, and remembers a manual choice in `localStorage`.
+fallback; German, French and Georgian live in one file. It auto-detects the visitor's browser
+language, offers a 🌐 switcher in the header, and remembers a manual choice in `localStorage`.
+
+> **Georgian fonts:** the primary faces (Anton/Manrope/Space Mono) have no Georgian glyphs, so
+> **Noto Sans Georgian** is loaded and added as a per-glyph fallback in the `--font-*` variables.
+> Thanks to Google Fonts' `unicode-range`, it downloads **only** when Georgian text is actually shown,
+> so non-Georgian visitors pay nothing.
 
 - `assets/js/i18n.js` — the engine (detect → apply → wire the switcher). Loaded as a plain script.
 - `assets/i18n/translations.js` — `window.BP_TRANSLATIONS = { de: {…}, fr: {…} }`.

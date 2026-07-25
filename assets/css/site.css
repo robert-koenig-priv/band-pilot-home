@@ -39,9 +39,11 @@ ul { list-style: none; padding: 0; }
   --radius: 16px;
   --radius-sm: 10px;
 
-  --font-display: "Anton", "Arial Narrow", sans-serif;
-  --font-body: "Manrope", system-ui, sans-serif;
-  --font-mono: "Space Mono", ui-monospace, monospace;
+  /* "Noto Sans Georgian" is a per-glyph fallback: Latin keeps the primary faces;
+     only Georgian glyphs use Noto (downloaded via unicode-range only when present). */
+  --font-display: "Anton", "Noto Sans Georgian", "Arial Narrow", sans-serif;
+  --font-body: "Manrope", "Noto Sans Georgian", system-ui, sans-serif;
+  --font-mono: "Space Mono", "Noto Sans Georgian", ui-monospace, monospace;
 
   --shadow: 0 24px 60px -24px rgba(0,0,0,.75);
   --shadow-soft: 0 12px 32px -18px rgba(0,0,0,.6);

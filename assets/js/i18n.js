@@ -5,8 +5,8 @@
 (function () {
   "use strict";
 
-  var SUPPORTED = ["en", "de", "fr"];
-  var LABELS = { en: "EN", de: "DE", fr: "FR" };
+  var SUPPORTED = ["en", "de", "fr", "ka"];
+  var LABELS = { en: "EN", de: "DE", fr: "FR", ka: "KA" };
   var STORAGE_KEY = "bp-lang";
   var T = window.BP_TRANSLATIONS || {};
 
