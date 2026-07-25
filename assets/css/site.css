@@ -152,6 +152,46 @@ h3.display { font-size: clamp(24px, 3.2vw, 36px); }
 .nav__toggle svg { margin-inline: auto; }
 .mobile-menu { display: none; } /* shown only on small screens when toggled */
 
+/* ---- Language switcher ---- */
+.langswitch { position: relative; }
+.langswitch__btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 12px; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--muted);
+  font-weight: 700; font-size: 14px;
+  transition: color .18s, border-color .18s, background .18s;
+}
+.langswitch__btn:hover { color: var(--text); border-color: var(--pilot); background: var(--slate); }
+.langswitch__btn svg { width: 17px; height: 17px; }
+.langswitch__cur { font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; }
+.langswitch__menu {
+  position: absolute; right: 0; top: calc(100% + 8px); min-width: 172px;
+  background: var(--slate-2); border: 1px solid var(--line);
+  border-radius: 12px; padding: 6px; box-shadow: var(--shadow-soft);
+  display: none; z-index: 60;
+}
+.langswitch.is-open .langswitch__menu { display: block; }
+.langswitch__menu button {
+  display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 12px; border-radius: 8px; color: var(--muted);
+  font-weight: 600; font-size: 14px; text-align: left;
+}
+.langswitch__menu button:hover { background: var(--slate); color: var(--text); }
+.langswitch__menu button.is-active { color: var(--pilot-bright); }
+.langswitch__menu button .tick { opacity: 0; color: var(--pilot-bright); font-family: var(--font-mono); }
+.langswitch__menu button.is-active .tick { opacity: 1; }
+
+/* mobile menu language row */
+.mobile-menu .langrow { display: flex; gap: 8px; margin-top: 16px; }
+.mobile-menu .langrow button {
+  flex: 1; padding: 11px 0; border: 1px solid var(--line); border-radius: 10px;
+  color: var(--muted); font-weight: 700; font-family: var(--font-mono); font-size: 13px; letter-spacing: .06em;
+}
+.mobile-menu .langrow button.is-active { color: var(--pilot-bright); border-color: var(--pilot); }
+
+/* Prevent a flash of English for non-English visitors (paired with the head script). */
+.i18n-pending body { visibility: hidden; }
+
 /* ---- Buttons ---- */
 .btn {
   display: inline-flex; align-items: center; gap: 9px;
@@ -466,6 +506,7 @@ a.card:hover { transform: translateY(-4px); border-color: var(--pilot); backgrou
 @media (max-width: 720px) {
   .nav__links { display: none; }
   .nav__cta { display: none; }
+  .langswitch { display: none; }
   .nav__toggle { display: grid; place-items: center; }
   .nav.is-open { position: relative; }
   .mobile-menu { display: none; }

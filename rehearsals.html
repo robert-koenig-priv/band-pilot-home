@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rehearsals — BandPilot</title>
-  <meta name="description" content="Plan rehearsals in BandPilot: build a setlist from the catalog, drag songs into order, mark absent members and email the whole band an update." />
+  <title data-i18n="reh.metaTitle">Rehearsals — BandPilot</title>
+  <meta name="description" data-i18n-content="reh.metaDesc" content="Plan rehearsals in BandPilot: build a setlist from the catalog, drag songs into order, mark absent members and email the whole band an update." />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <script>document.documentElement.classList.add("js");</script>
+  <script>
+  (function(){var d=document.documentElement;d.classList.add("js");
+  var SUP=["en","de","fr"],l=null;try{var s=localStorage.getItem("bp-lang");if(s&&SUP.indexOf(s)>-1)l=s;}catch(e){}
+  if(!l){var n=navigator.languages||[navigator.language||"en"];for(var i=0;i<n.length;i++){var b=(n[i]||"").slice(0,2).toLowerCase();if(SUP.indexOf(b)>-1){l=b;break;}}}
+  l=l||"en";d.lang=l;window.__bpLang=l;if(l!=="en"){d.className+=" i18n-pending";setTimeout(function(){d.classList.remove("i18n-pending");},1500);}})();
+  </script>
   <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
@@ -26,22 +31,38 @@
         <span class="brand__word"><b>Band</b><b class="pi">Pilot</b></span>
       </a>
       <nav class="nav__links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="songs.html">Songs</a>
-        <a href="rehearsals.html" class="is-active">Rehearsals</a>
-        <a href="getting-started.html">Get started</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="songs.html" data-i18n="nav.songs">Songs</a>
+        <a href="rehearsals.html" class="is-active" data-i18n="nav.rehearsals">Rehearsals</a>
+        <a href="getting-started.html" data-i18n="nav.start">Get started</a>
       </nav>
-      <a class="btn btn--primary nav__cta" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open Web App</a>
-      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <div class="langswitch">
+        <button class="langswitch__btn" aria-haspopup="true" aria-expanded="false" data-i18n-aria-label="common.changeLang" aria-label="Change language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 6 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-6-3.8-9s1.3-6.3 3.8-9z"/></svg>
+          <span class="langswitch__cur">EN</span>
+        </button>
+        <div class="langswitch__menu" role="menu">
+          <button data-lang="en" role="menuitem">English <span class="tick">✓</span></button>
+          <button data-lang="de" role="menuitem">Deutsch <span class="tick">✓</span></button>
+          <button data-lang="fr" role="menuitem">Français <span class="tick">✓</span></button>
+        </div>
+      </div>
+      <a class="btn btn--primary nav__cta" href="https://app.bandpilot.net" target="_blank" rel="noopener" data-i18n="nav.openWebApp">Open Web App</a>
+      <button class="nav__toggle" data-i18n-aria-label="common.openMenu" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
     <div class="mobile-menu">
-      <a href="index.html">Home</a>
-      <a href="songs.html">Songs</a>
-      <a href="rehearsals.html">Rehearsals</a>
-      <a href="getting-started.html">Get started</a>
-      <a class="btn btn--primary" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open Web App</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="songs.html" data-i18n="nav.songs">Songs</a>
+      <a href="rehearsals.html" data-i18n="nav.rehearsals">Rehearsals</a>
+      <a href="getting-started.html" data-i18n="nav.start">Get started</a>
+      <a class="btn btn--primary" href="https://app.bandpilot.net" target="_blank" rel="noopener" data-i18n="nav.openWebApp">Open Web App</a>
+      <div class="langrow">
+        <button data-lang="en">EN</button>
+        <button data-lang="de">DE</button>
+        <button data-lang="fr">FR</button>
+      </div>
     </div>
   </header>
 
@@ -49,13 +70,13 @@
     <!-- ============ PAGE INTRO ============ -->
     <section class="section pageintro">
       <div class="wrap">
-        <p class="eyebrow reveal">Feature guide · Rehearsals</p>
-        <h1 class="display reveal" data-d="1">Turn the catalog<br>into a plan.</h1>
-        <p class="lead reveal" data-d="1">A rehearsal is a dated running order pulled straight from your songs. The bar at the bottom is the date (<span class="key">Mi., Aug. 5 · 19:00</span>); step through past and upcoming sessions with the arrows, and jump to the menu to create, copy, reschedule or clear one.</p>
-        <nav class="jumpnav reveal" data-d="2" aria-label="On this page">
-          <a href="#planning">Build the setlist</a>
-          <a href="#absent">Absent members</a>
-          <a href="#email">Email updates</a>
+        <p class="eyebrow reveal" data-i18n="reh.introEyebrow">Feature guide · Rehearsals</p>
+        <h1 class="display reveal" data-d="1" data-i18n="reh.introTitle">Turn the catalog<br>into a plan.</h1>
+        <p class="lead reveal" data-d="1" data-i18n="reh.introLead">A rehearsal is a dated running order pulled straight from your songs. The bar at the bottom is the date (<span class="key">Mi., Aug. 5 · 19:00</span>); step through past and upcoming sessions with the arrows, and jump to the menu to create, copy, reschedule or clear one.</p>
+        <nav class="jumpnav reveal" data-d="2" data-i18n-aria-label="common.onThisPage" aria-label="On this page">
+          <a href="#planning" data-i18n="reh.jumpPlanning">Build the setlist</a>
+          <a href="#absent" data-i18n="reh.jumpAbsent">Absent members</a>
+          <a href="#email" data-i18n="reh.jumpEmail">Email updates</a>
         </nav>
       </div>
     </section>
@@ -65,20 +86,20 @@
       <div class="wrap">
         <div class="feature reveal">
           <div class="feature__text">
-            <p class="eyebrow">The setlist</p>
-            <h3 class="display">Drag it into the order you'll play.</h3>
-            <p>Start from an empty session, then pull songs in from the catalog — the same filters and views you know from <a href="songs.html" class="accent">Songs</a>. Grab the handle to drag a song up or down, and swipe to drop one that didn't make the cut. The running order carries each song's key and tempo, so the plan is also your cheat sheet.</p>
+            <p class="eyebrow" data-i18n="reh.planEyebrow">The setlist</p>
+            <h3 class="display" data-i18n="reh.planTitle">Drag it into the order you'll play.</h3>
+            <p data-i18n="reh.planBody">Start from an empty session, then pull songs in from the catalog — the same filters and views you know from <a href="songs.html" class="accent">Songs</a>. Grab the handle to drag a song up or down, and swipe to drop one that didn't make the cut. The running order carries each song's key and tempo, so the plan is also your cheat sheet.</p>
             <ul class="howto">
-              <li><span class="n">+</span><span><b>Add from catalog</b> — press <b>+</b>, then tap songs to add them to the session.</span></li>
-              <li><span class="n">≡</span><span><b>Reorder</b> — drag by the handle to set the exact running order.</span></li>
-              <li><span class="n">←</span><span><b>Swipe to remove</b> — swipe a song to pull it from this rehearsal.</span></li>
-              <li><span class="n">‹›</span><span><b>Step between dates</b> — the arrows on the date bar move through sessions.</span></li>
+              <li><span class="n">+</span><span data-i18n="reh.plan1"><b>Add from catalog</b> — press <b>+</b>, then tap songs to add them to the session.</span></li>
+              <li><span class="n">≡</span><span data-i18n="reh.plan2"><b>Reorder</b> — drag by the handle to set the exact running order.</span></li>
+              <li><span class="n">←</span><span data-i18n="reh.plan3"><b>Swipe to remove</b> — swipe a song to pull it from this rehearsal.</span></li>
+              <li><span class="n">‹›</span><span data-i18n="reh.plan4"><b>Step between dates</b> — the arrows on the date bar move through sessions.</span></li>
             </ul>
           </div>
           <div class="feature__media">
             <div class="media-duo">
-              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-add.jpg" alt="Adding songs to a rehearsal from the catalog, with drag handles" loading="lazy" width="1080" height="2340" /></div></div>
-              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-setlist.jpg" alt="A rehearsal setlist of ten songs showing keys and BPM" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-add.jpg" data-i18n-alt="reh.planAlt1" alt="Adding songs to a rehearsal from the catalog, with drag handles" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-setlist.jpg" data-i18n-alt="reh.planAlt2" alt="A rehearsal setlist of ten songs showing keys and BPM" loading="lazy" width="1080" height="2340" /></div></div>
             </div>
           </div>
         </div>
@@ -90,19 +111,19 @@
       <div class="wrap">
         <div class="feature feature--flip reveal">
           <div class="feature__text">
-            <p class="eyebrow">Who's in the room</p>
-            <h3 class="display">Plan around who can make it.</h3>
-            <p>Open the session menu and choose <b>Absent</b> to tick off anyone who can't come. Their names show right on the date bar with a count, so you set a realistic plan — no point rehearsing the three-part harmony when both singers are out.</p>
+            <p class="eyebrow" data-i18n="reh.absentEyebrow">Who's in the room</p>
+            <h3 class="display" data-i18n="reh.absentTitle">Plan around who can make it.</h3>
+            <p data-i18n="reh.absentBody">Open the session menu and choose <b>Absent</b> to tick off anyone who can't come. Their names show right on the date bar with a count, so you set a realistic plan — no point rehearsing the three-part harmony when both singers are out.</p>
             <ul class="howto">
-              <li><span class="n">⋮</span><span><b>Open the menu</b> — Copy, New, Send email, Absent, Time and Delete all live here.</span></li>
-              <li><span class="n">☑</span><span><b>Mark absent</b> — tick each member who won't attend, then tap Done.</span></li>
-              <li><span class="n">👥</span><span><b>See it on the bar</b> — absentees are listed under the date with a running count.</span></li>
+              <li><span class="n">⋮</span><span data-i18n="reh.absent1"><b>Open the menu</b> — Copy, New, Send email, Absent, Time and Delete all live here.</span></li>
+              <li><span class="n">☑</span><span data-i18n="reh.absent2"><b>Mark absent</b> — tick each member who won't attend, then tap Done.</span></li>
+              <li><span class="n">👥</span><span data-i18n="reh.absent3"><b>See it on the bar</b> — absentees are listed under the date with a running count.</span></li>
             </ul>
           </div>
           <div class="feature__media">
             <div class="media-duo">
-              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-absent.jpg" alt="Absent dialog with band members and checkboxes" loading="lazy" width="1080" height="2340" /></div></div>
-              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-absent-members.jpg" alt="The date bar showing two absent members, Rob and Gloria" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-absent.jpg" data-i18n-alt="reh.absentAlt1" alt="Absent dialog with band members and checkboxes" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-absent-members.jpg" data-i18n-alt="reh.absentAlt2" alt="The date bar showing two absent members, Rob and Gloria" loading="lazy" width="1080" height="2340" /></div></div>
             </div>
           </div>
         </div>
@@ -113,26 +134,26 @@
     <section class="section divider anchor" id="email">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="eyebrow">Email updates</p>
-          <h2 class="display">Tell the band once, reach everyone.</h2>
-          <p class="lead">Changed the date, the set or who's away? Choose <b>Send email</b> and BandPilot mails an update to every member except you. They get the new details in their inbox with a link straight back into the app — no separate group chat to keep in sync.</p>
+          <p class="eyebrow" data-i18n="reh.emailEyebrow">Email updates</p>
+          <h2 class="display" data-i18n="reh.emailTitle">Tell the band once, reach everyone.</h2>
+          <p class="lead" data-i18n="reh.emailLead">Changed the date, the set or who's away? Choose <b>Send email</b> and BandPilot mails an update to every member except you. They get the new details in their inbox with a link straight back into the app — no separate group chat to keep in sync.</p>
         </div>
         <div class="feature reveal" style="padding-top:0">
           <div class="feature__text">
             <ul class="howto">
-              <li><span class="n">✉</span><span><b>Send email</b> from the session menu triggers a confirmation before anything goes out.</span></li>
-              <li><span class="n">✓</span><span><b>Everyone but you</b> gets the note — the app knows it was your change.</span></li>
-              <li><span class="n">🔗</span><span><b>Deep link back</b> — the email links to the app so members open the exact session.</span></li>
+              <li><span class="n">✉</span><span data-i18n="reh.email1"><b>Send email</b> from the session menu triggers a confirmation before anything goes out.</span></li>
+              <li><span class="n">✓</span><span data-i18n="reh.email2"><b>Everyone but you</b> gets the note — the app knows it was your change.</span></li>
+              <li><span class="n">🔗</span><span data-i18n="reh.email3"><b>Deep link back</b> — the email links to the app so members open the exact session.</span></li>
             </ul>
             <div class="note">
               <svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-              <p><b>What lands in the inbox:</b> a short “Rehearsal update” with the band, date and time, and a link to open BandPilot for the latest details.</p>
+              <p data-i18n="reh.emailNote"><b>What lands in the inbox:</b> a short “Rehearsal update” with the band, date and time, and a link to open BandPilot for the latest details.</p>
             </div>
           </div>
           <div class="feature__media">
             <div class="media-duo">
-              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-notify.jpg" alt="Notify band members confirmation dialog before sending an email" loading="lazy" width="1080" height="2340" /></div></div>
-              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-email.jpg" alt="The rehearsal update email as received in Gmail" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-notify.jpg" data-i18n-alt="reh.emailAlt1" alt="Notify band members confirmation dialog before sending an email" loading="lazy" width="1080" height="2340" /></div></div>
+              <div class="phone phone--sm"><div class="phone__screen"><img src="assets/img/rehearsal-email.jpg" data-i18n-alt="reh.emailAlt2" alt="The rehearsal update email as received in Gmail" loading="lazy" width="1080" height="2340" /></div></div>
             </div>
           </div>
         </div>
@@ -142,11 +163,11 @@
     <!-- ============ CTA ============ -->
     <section class="section section--tight divider">
       <div class="wrap ctaband reveal">
-        <h2 class="display">Set your band up in minutes.</h2>
-        <p class="lead" style="margin-inline:auto">New to BandPilot? The getting-started guide covers signing in, joining bands and who does what.</p>
+        <h2 class="display" data-i18n="reh.ctaTitle">Set your band up in minutes.</h2>
+        <p class="lead" style="margin-inline:auto" data-i18n="reh.ctaLead">New to BandPilot? The getting-started guide covers signing in, joining bands and who does what.</p>
         <div class="btnrow">
-          <a class="btn btn--primary btn--lg" href="getting-started.html">Get started</a>
-          <a class="btn btn--ghost btn--lg" href="https://app.bandpilot.net" target="_blank" rel="noopener">Open the Web App</a>
+          <a class="btn btn--primary btn--lg" href="getting-started.html" data-i18n="common.getStarted">Get started</a>
+          <a class="btn btn--ghost btn--lg" href="https://app.bandpilot.net" target="_blank" rel="noopener" data-i18n="common.openWebAppCta">Open the Web App</a>
         </div>
       </div>
     </section>
@@ -165,20 +186,20 @@
           </svg>
           <span class="brand__word"><b>Band</b><b class="pi">Pilot</b></span>
         </a>
-        <p class="footer__tag">Manage. Organize. Rock. The shared home for your band's songs and rehearsals.</p>
+        <p class="footer__tag" data-i18n="footer.tagline">Manage. Organize. Rock. The shared home for your band's songs and rehearsals.</p>
       </div>
       <div class="footer">
-        <h4>Product</h4>
-        <a href="songs.html">Songs</a>
-        <a href="rehearsals.html">Rehearsals</a>
-        <a href="getting-started.html">Get started</a>
-        <a href="https://app.bandpilot.net" target="_blank" rel="noopener">Web app ↗</a>
+        <h4 data-i18n="footer.product">Product</h4>
+        <a href="songs.html" data-i18n="nav.songs">Songs</a>
+        <a href="rehearsals.html" data-i18n="nav.rehearsals">Rehearsals</a>
+        <a href="getting-started.html" data-i18n="nav.start">Get started</a>
+        <a href="https://app.bandpilot.net" target="_blank" rel="noopener" data-i18n="footer.webAppLink">Web app ↗</a>
       </div>
       <div class="footer">
-        <h4>Platforms</h4>
-        <a>Web app — live</a>
-        <a>Android — coming soon</a>
-        <a>iOS — coming soon</a>
+        <h4 data-i18n="footer.platforms">Platforms</h4>
+        <a data-i18n="footer.platWeb">Web app — live</a>
+        <a data-i18n="footer.platAndroid">Android — coming soon</a>
+        <a data-i18n="footer.platIos">iOS — coming soon</a>
       </div>
     </div>
     <div class="wrap footer__bottom">
@@ -187,6 +208,8 @@
     </div>
   </footer>
 
+  <script src="assets/i18n/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/site.js"></script>
 </body>
 </html>
