@@ -4,3 +4,10 @@
 # Source screenshots (not used by the site; some contain a personal email).
 # The site only uses the curated copies in assets/img/.
 screens/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
