@@ -477,6 +477,12 @@ a.card:hover { transform: translateY(-4px); border-color: var(--pilot); backgrou
 .footer h4 { font-family: var(--font-mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); margin-bottom: 16px; }
 .footer a { color: var(--muted); display: block; padding: 5px 0; }
 .footer a:hover { color: var(--text); }
+/* Data-source credit, on its own line above the copyright rather than squeezed into that flex row.
+   The links keep --muted rather than --faint: a backlink nobody can tell is a link does not do the job,
+   and the GetSongBPM one is a condition of its API key. */
+.footer__credits { border-top: 1px solid var(--line-soft); padding-block: 18px; color: var(--faint); font-size: 14px; }
+.footer__credits a { color: var(--muted); }
+.footer__credits a:hover { color: var(--text); text-decoration: underline; }
 .footer__bottom { border-top: 1px solid var(--line-soft); padding-block: 22px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--faint); font-size: 14px; }
 .footer__bottom .mono { font-family: var(--font-mono); letter-spacing: .04em; }
 

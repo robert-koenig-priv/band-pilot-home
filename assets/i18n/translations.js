@@ -36,6 +36,7 @@ window.BP_TRANSLATIONS = {
     "footer.platWeb": "Web-App — live",
     "footer.platAndroid": "Android — demnächst",
     "footer.platIos": "iOS — demnächst",
+    "footer.dataSources": "Songdaten von <a href='https://musicbrainz.org' target='_blank' rel='noopener'>MusicBrainz</a> · Tempo und Tonart von <a href='https://getsongbpm.com' target='_blank' rel='noopener'>GetSongBPM</a>",
 
     /* -- pipeline status names -- */
     "pipe.ready": "Bühnenreif",
@@ -306,6 +307,7 @@ window.BP_TRANSLATIONS = {
     "footer.platWeb": "Web app — disponible",
     "footer.platAndroid": "Android — bientôt",
     "footer.platIos": "iOS — bientôt",
+    "footer.dataSources": "Données des morceaux via <a href='https://musicbrainz.org' target='_blank' rel='noopener'>MusicBrainz</a> · Tempo et tonalité via <a href='https://getsongbpm.com' target='_blank' rel='noopener'>GetSongBPM</a>",
 
     /* -- pipeline status names -- */
     "pipe.ready": "Prêt pour la scène",
@@ -576,6 +578,7 @@ window.BP_TRANSLATIONS = {
     "footer.platWeb": "ვებ-აპი — ხელმისაწვდომია",
     "footer.platAndroid": "Android — მალე",
     "footer.platIos": "iOS — მალე",
+    "footer.dataSources": "სიმღერების მონაცემები — <a href='https://musicbrainz.org' target='_blank' rel='noopener'>MusicBrainz</a> · ტემპო და ტონალობა — <a href='https://getsongbpm.com' target='_blank' rel='noopener'>GetSongBPM</a>",
 
     /* -- pipeline status names -- */
     "pipe.ready": "სცენისთვის მზად",
